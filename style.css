@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.nav-wrapper {
+  background: rgba(184, 184, 184, 0.6);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10000;
+}
+nav {
+  height: 70px;
+  max-width: 960px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 70px;
+}
+
+.logo {
+  color: #222;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #222;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: #fff;
+    gap: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+}
+
+/* Hero */
+
+.hero-wrapper {
+  height: 100dvh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.left {
+  flex: 1 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+.hero-left-btn {
+  background: green;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  max-width: 150px;
+  margin-top: 20px;
+}
+.right {
+  flex: 1 !important;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Items */
+.carousel-item {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover !important;
+  border-radius: 20px;
+}
+
+/* Navigation Buttons */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-wrapper {
+    height: auto;
+  }
+  .hero {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    gap: 30px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
